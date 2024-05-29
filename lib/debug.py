@@ -1,6 +1,12 @@
-#!/usr/bin/env python3
+# your code goes here!
+class Anagram:
+    def __init__(self,word):
+        self.sorted_letters = sorted([letter for letter in word])
+    
+    def match(self, given_list):
+        matching = []
+        for i in given_list:
+            if sorted([letter for letter in i]) == self.sorted_letters:
+                matching.append(i)
 
-from anagram import Anagram
-
-if __name__ == '__main__':
-    import ipdb; ipdb.set_trace()
+        return matching
